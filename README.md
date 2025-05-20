@@ -12,10 +12,9 @@ Este proyecto clasifica a los usuarios según su edad antes de registrarse o aut
 ## Instalación
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPO.git
-cd TU_REPO
+git clone https://github.com/VAlejandro22/Edades_SoftwareSeguro.git
+cd Edades_SoftwareSeguro
 composer install
 cp .env.example .env
-php artisan key:generate
 php artisan migrate
 php artisan serve
