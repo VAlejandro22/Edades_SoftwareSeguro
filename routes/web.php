@@ -20,11 +20,8 @@ Route::post('/salir', function () {
 })->name('salir');
 
 
-Route::get('/', [EdadController::class, 'formulario'])
-    ->middleware(RedirigeSiYaTieneEdad::class)
-    ->name('edad.formulario');
-Route::post('/clasificar', [EdadController::class, 'clasificar'])
-    ->middleware(ClasificaEdadMiddleware::class);
+Route::get('/', [EdadController::class, 'formulario'])->name('edad.formulario');
+Route::post('/clasificar', [EdadController::class, 'clasificar'])->middleware(ClasificaEdadMiddleware::class);
 
 // Route::middleware([VerificaEdadEnSesion::class])->group(function () {
     Route::get('/bebes', [BebeController::class, 'index']);
